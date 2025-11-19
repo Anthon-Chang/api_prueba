@@ -1,13 +1,10 @@
 :root {
-
   color-scheme: light dark;
-  
-  background-color: hsl(234, 88%, 75%);
 }
 
 .anime-container {
-  background-color: #1f1f1f;
-  color: #e75353;
+  background-color: var(--surface);
+  color: var(--text);
   padding: 20px;
   border-radius: 15px;
   margin-top: 30px;
@@ -29,8 +26,8 @@
 }
 
 .anime-header button {
-  background-color: #7c3aed;
-  color: white;
+  background-color: var(--accent);
+  color: var(--surface);
   border: none;
   border-radius: 8px;
   padding: 8px 15px;
@@ -39,7 +36,7 @@
 }
 
 .anime-header button:hover {
-  background-color: #5b21b6;
+  background-color: var(--accent-2);
 }
 
 .anime-grid {
@@ -49,7 +46,7 @@
 }
 
 .anime-card {
-  background-color: #2d2d2d;
+  background-color: var(--muted);
   border-radius: 10px;
   padding: 15px;
   text-align: center;
@@ -61,7 +58,7 @@
 
 .anime-card:hover {
   transform: scale(1.05);
-  background-color: #383838;
+  background-color: var(--surface);
 }
 
 .anime-image {
@@ -79,6 +76,6 @@
 }
 
 .anime-card p {
-  color: #b3b3b3;
+  color: rgba(var(--text-rgb),0.7);
   font-size: 0.9rem;
 }

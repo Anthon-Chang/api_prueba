@@ -1,25 +1,31 @@
-import { useState } from "react";
-import NinjaList from "./components/ninjaList";
-import NinjaForm from "./components/ninjaForm";
-import AnimeList from "./components/animeList";
+
+//import AnimeList from "./components/animeList";
+//import PlanList from "./components/PlanList";
+import Home from "./pages/home.jsx";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Servicios from "./pages/Servicios";
+import Login from "./pages/Login";
+import PlanDetail from "./pages/PlanDetail";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [reload, setReload] = useState(false);
-  const recargar = () => setReload(!reload);
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white p-8">
-      <h1 className="text-3xl font-bold mb-6 text-center">🌐 Portal Ninja & Anime</h1>
-      <div className="grid md:grid-cols-2 gap-6">
-        <div>
-          <NinjaForm onAdd={recargar} />
-          <NinjaList key={reload} />
-        </div>
-        <div>
-          <AnimeList />
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <main className="app-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/servicios" element={<Servicios/>} />
+          <Route path="/about" element={<Home/>} />
+          <Route path="/contact" element={<Home/>} />
+          <Route path="/plans/:id" element={<PlanDetail/>} />
+          <Route path="/login" element={<Login/>} />
+        </Routes>
+        <Footer />
+      </main>
+    </BrowserRouter>
   );
 }
 

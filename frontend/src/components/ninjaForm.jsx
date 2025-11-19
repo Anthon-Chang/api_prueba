@@ -1,4 +1,4 @@
-import axios from "axios";
+import apiClient from "../services/apiClient";
 import { useState } from "react";
 import "./../ninjas.css";
 
@@ -11,7 +11,7 @@ const NinjaForm = ({ onAdd }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:4000/api/ninjas", form);
+    await apiClient.post(`/ninjas`, form);
     setForm({ nombre: "", rango: "", aldea: "" });
     onAdd(); // refrescar lista
   };

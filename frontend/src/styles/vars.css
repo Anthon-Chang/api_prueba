@@ -1,0 +1,49 @@
+/* CSS variables centralizadas para la app */
+:root{
+  --bg: #fffdf8; /* warm off-white */
+  --surface: #ffffff;
+  --container: 1100px;
+  --brand: #87431b; /* deep amber/brown for headings */
+  --terracotta: #87431b;
+  --accent: #f59e0b; /* amber-500 */
+  --accent-2: #ffbf60; /* lighter amber */
+  --muted: #fff7ed; /* very light amber tint */
+  --dark: #4b2900; /* dark warm text */
+  --text: #2b1a07; /* primary text */
+  --radius: 10px;
+  --gap: 20px;
+  --card-shadow: 0 6px 18px rgba(138,83,30,0.06);
+  /* RGB fallbacks for transparent variants */
+  --accent-rgb: 245,158,11; /* amber */
+  --terracotta-rgb: 135,67,27;
+  --shadow-rgb: 138,83,30;
+  --muted-rgb: 0,0,0;
+  --surface-rgb: 255,255,255;
+  --text-rgb: 43,26,7;
+  --danger: #ef4444;
+  --danger-rgb: 239,68,68;
+  --danger-dark: #dc2626;
+  --theme-transition: 250ms;
+  --theme-ease: cubic-bezier(0.2,0.8,0.2,1);
+}
+
+/* Dark theme overrides (applied when documentElement[data-theme="dark"]) */
+[data-theme="dark"] {
+  --bg: #0f0d0a; /* very dark warm */
+  --surface: #141210;
+  --muted: #1b160f;
+  --accent: #fbbf24; /* amber-400 on dark */
+  --accent-2: #f59e0b;
+  --brand: #ffb86b;
+  --terracotta: #ffb86b;
+  --dark: #fff7ed;
+  --text: #fff9f5;
+  --card-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  /* Dark-theme RGB vars */
+  --accent-rgb: 251,191,36;
+  --terracotta-rgb: 255,184,107;
+  --shadow-rgb: 0,0,0;
+  --muted-rgb: 0,0,0;
+  --surface-rgb: 20,18,16;
+  --text-rgb: 255,249,245;
+}

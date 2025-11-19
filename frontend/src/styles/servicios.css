@@ -1,0 +1,10 @@
+@import './vars.css';
+
+.container { width:90%; max-width:var(--container); margin:0 auto }
+
+.servicios-page { 
+    background: linear-gradient(180deg, rgba(var(--text-rgb),0.02), transparent); 
+    padding:40px 0 
+}
+
+.servicios-page .container{ color:var(--text) }

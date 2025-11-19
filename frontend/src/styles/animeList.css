@@ -1,0 +1,22 @@
+
+@import './vars.css';
+
+.anime-container { padding:20px; background:linear-gradient(180deg, var(--muted), transparent); border-radius:10px }
+
+.anime-header{ display:flex; justify-content:space-between; align-items:center; margin-bottom:18px }
+
+.anime-header button{ padding:8px 14px; background:var(--accent); color:white; border:none; border-radius:8px; cursor:pointer; transition:transform .12s, box-shadow .12s }
+.anime-header button:hover{ transform:translateY(-2px); box-shadow:0 10px 30px rgba(37,99,235,0.08) }
+
+.filters{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:18px }
+.filters input, .filters select{ padding:8px 10px; border-radius:8px; border:1px solid rgba(0,0,0,0.06) }
+
+.anime-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:18px }
+
+.anime-card{ background:var(--surface); padding:12px; text-align:center; border-radius:10px; box-shadow:var(--card-shadow); transition:transform .14s ease }
+.anime-card:hover{ transform:translateY(-6px) }
+
+.anime-card img{ width:100%; border-radius:8px; display:block }
+.anime-card h3{ font-size:1rem; margin-top:8px; color:var(--dark) }
+
+

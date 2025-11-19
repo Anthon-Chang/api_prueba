@@ -1,17 +1,18 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import "./../ninjas.css";
+
+import apiClient from "../services/apiClient";
 
 const NinjaList = () => {
   const [ninjas, setNinjas] = useState([]);
 
   const fetchNinjas = async () => {
-    const res = await axios.get("http://localhost:4000/api/ninjas");
+    const res = await apiClient.get(`/ninjas`);
     setNinjas(res.data);
   };
 
   const eliminarNinja = async (id) => {
-    await axios.delete(`http://localhost:4000/api/ninjas/${id}`);
+    await apiClient.delete(`/ninjas/${id}`);
     fetchNinjas();
   };
 
